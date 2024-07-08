@@ -26,11 +26,59 @@
 
   /* Font */
 
-  -font: Barlow Semi Condensed;
+  --font: Barlow Semi Condensed;
   /* - Weights: 500, 600 */
 }
+body {
+  background-color: var(--Light-grayish-blue);
+  font-family: var(--font);
+  color: var(--White);
+}
 .testimonials {
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin: 2rem;
+  border-radius: 10px;
+}
+.testimonials p,
+.testimonials blockquote {
+  opacity: 50%;
+  font-weight: 600;
+  padding: 0.75rem 0;
 }
 .profiles {
   display: flex;
+  gap: 2rem;
+}
+.profiles img {
+  border-radius: 50%;
+  border: 3px solid var(--White);
+}
+.testimonials__card--Moderate-violet {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: var(--Moderate-violet);
+}
+.testimonials__card--Very-dark-grayish-blue {
+  background-color: var(--Very-dark-grayish-blue);
+}
+.testimonials__card--white {
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+.testimonials__card--Very-dark-blackish-blue {
+  background-color: var(--Very-dark-blackish-blue);
+}
+.testimonials__card--light-gray {
+  background-color: var(--Light-gray);
+  color: var(--Very-dark-grayish-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
