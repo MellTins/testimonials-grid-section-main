@@ -33,7 +33,17 @@ body {
   background-color: var(--Light-grayish-blue);
   font-family: var(--font);
   color: var(--White);
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+main{
+  max-width: 1440px;
+  
+}
+/* Cards generic designs */
 .testimonials {
   padding: 1rem;
   font-size: 1.5rem;
@@ -48,18 +58,22 @@ body {
 }
 .profiles {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 .profiles img {
   border-radius: 50%;
   border: 3px solid var(--White);
+  max-width: 100%;
+  height: 87px;
 }
+/*  Cards backgrounds */
 .testimonials__card--Moderate-violet {
   background-image: url("images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right;
   background-color: var(--Moderate-violet);
 }
+
 .testimonials__card--Very-dark-grayish-blue {
   background-color: var(--Very-dark-grayish-blue);
 }
@@ -70,10 +84,8 @@ body {
 .testimonials__card--Very-dark-blackish-blue {
   background-color: var(--Very-dark-blackish-blue);
 }
-.testimonials__card--light-gray {
-  background-color: var(--Light-gray);
-  color: var(--Very-dark-grayish-blue);
-}
+
+/* footer */
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -81,4 +93,20 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* mediaqueries */
+@media (min-width: 1140px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #grid-row {
+    grid-row: span 2;
+  }
+  #grid-col {
+    grid-column: span 2;
+  }
 }
